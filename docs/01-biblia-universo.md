@@ -1,6 +1,6 @@
 # OLINDA ENCANTADA
 
-## Bíblia do Universo — Documento Mestre v1.0
+## Bíblia do Universo — Documento Mestre v1.1
 
 > **Função deste documento:** ser a fonte única de verdade (single source of truth) do universo narrativo. Tudo que for produzido — roteiro, prompt de imagem, vídeo, voz, música — deve derivar daqui. No pipeline com IA, este documento é o “PDF gigantesco de pesquisa” que alimenta a máquina (ver Documento 02).
 
@@ -130,17 +130,17 @@ Os bonecos gigantes não são protagonistas. São mentores — como mestres Jedi
 - Guardião das memórias perdidas. Elegante, misterioso, sábio.
 - Sempre aparece quando o relógio marca meia-noite.
 - **Nunca dá respostas completas. Sempre conduz a jornada.**
-- Referência real: boneco mais antigo e tradicional de Olinda (1932), Patrimônio Vivo de PE (2006). Fraque, cartola, chave da cidade.
+- Referência real: boneco mais antigo e tradicional de Olinda (**1931** — corrigido na pesquisa do moodboard, Doc 05), Patrimônio Vivo de PE (2006). Fraque, cartola, chave da cidade. O fraque real é **verde e branco** (cores do bloco) — decisão de design pendente de validação na conversa com os guardiões (ver kit em `producao/parcerias/`).
 
 ### Mulher do Dia — *Guardiã das histórias do presente*
 
 - Figura maternal. Conhece todos os moradores e todas as histórias. Representa acolhimento e sabedoria.
-- Referência real: criada em 1967; cores amarelo/azul (simbologia de Oxum/Iemanjá tratada apenas como paleta, com leveza — ver seção 9).
+- Referência real: criada em 1967; cores amarelo/azul (simbologia de Oxum/Iemanjá tratada apenas como paleta, com leveza — ver seção 9). **Casou oficialmente com o Homem da Meia-Noite em 1990** — gancho de lore: os dois grandes guardiões são um casal.
 
 ### Menino da Tarde — *Guardião da criatividade*
 
 - Inventor. Constrói mecanismos mágicos com elementos do carnaval.
-- Referência real: criado em 1974.
+- Referência real: criado em 1974; na tradição, é o **“filho” do casal** Homem da Meia-Noite & Mulher do Dia — a família de guardiões já existe no folclore real.
 
 ### Menina da Tarde — *Guardiã da arte*
 
@@ -150,6 +150,8 @@ Os bonecos gigantes não são protagonistas. São mentores — como mestres Jedi
 ### Mentor adicional (homenagem estratégica)
 
 **Mestre Luiz** — personagem lendário: bonequeiro, professor, Guardião dos Segredos das Calungas. Não É Luiz Adolfo, mas quem conhece a história percebe a homenagem. (Racional completo no Documento 03.)
+
+> **Fato real a explorar (pesquisa Doc 05):** existem versões **miniatura** dos bonecos gigantes que crianças carregam nos desfiles. Gancho duplo: dentro da ficção (toda criança pode ter "seu" guardião pequeno) e fora dela (linha óbvia de brinquedo/merchandising — critério 4 de validação).
 
 -----
 
@@ -291,4 +293,13 @@ Antes de aprovar qualquer personagem, episódio ou elemento de lore, responder:
 
 -----
 
-*Documento vivo. Versão 1.0 — junho/2026. Toda alteração de lore deve ser registrada aqui antes de entrar em produção.*
+## REGISTRO DE ALTERAÇÕES
+
+| Versão | Data | Mudança |
+|---|---|---|
+| 1.0 | jun/2026 | Documento fundacional |
+| 1.1 | jun/2026 | Fatos verificados na pesquisa do moodboard (Doc 05): HMN nasceu em **1931** (não 1932); fraque real verde/branco; casamento oficial HMN + Mulher do Dia em **1990**; Menino da Tarde como "filho" do casal; miniaturas dos bonecos carregadas por crianças |
+
+-----
+
+*Documento vivo. Versão 1.1 — junho/2026. Toda alteração de lore deve ser registrada aqui antes de entrar em produção.*
