@@ -13,6 +13,7 @@ docs/                          ← base de conhecimento (anexar ao Project no Cl
   02-pipeline-producao-ia.md       Engenharia de produção (4 camadas, 5 travas)
   03-roadmap-estrategico.md        Fases, MVP, legitimação, financiamento, riscos
   04-setup-claude-higgsfield.md    Setup operacional passo a passo
+  05-moodboard-referencias.md      Mapa estético (Grupos A–E) + lacunas para fotos próprias
 
 producao/
   prompts/
@@ -33,7 +34,7 @@ assets/                        ← banco de assets versionado (Trava 4 — nunca
 |---|---|
 | Camada 1 — Base de conhecimento | ✅ Pronta (docs 00–04) |
 | Camada 2 — Planejamento do MVP | ✅ Roteiro + decupagem do ep00 prontos |
-| Semana 1 — Moodboard Mestre | ⬜ Fotografar Olinda → `assets/moodboard/` |
+| Semana 1 — Moodboard Mestre | 🔶 Referências CC coletadas (22 imagens + mapa estético no Doc 05); faltam fotos próprias 35mm |
 | Semana 2 — Testes de estilo + travas de modelo | ⬜ Doc 04, seção 3 |
 | Semana 3 — Character sheets + Soul IDs | ⬜ Prompts prontos em `producao/prompts/personagens/` |
 | Semana 4 — Produção do ep00 | ⬜ Decupagem pronta em `producao/episodios/ep00-mvp/` |
