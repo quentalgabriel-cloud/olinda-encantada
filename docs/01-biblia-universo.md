@@ -1,6 +1,6 @@
 # OLINDA ENCANTADA
 
-## Bíblia do Universo — Documento Mestre v1.1
+## Bíblia do Universo — Documento Mestre v1.2
 
 > **Função deste documento:** ser a fonte única de verdade (single source of truth) do universo narrativo. Tudo que for produzido — roteiro, prompt de imagem, vídeo, voz, música — deve derivar daqui. No pipeline com IA, este documento é o “PDF gigantesco de pesquisa” que alimenta a máquina (ver Documento 02).
 
@@ -131,6 +131,7 @@ Os bonecos gigantes não são protagonistas. São mentores — como mestres Jedi
 - Sempre aparece quando o relógio marca meia-noite.
 - **Nunca dá respostas completas. Sempre conduz a jornada.**
 - Referência real: boneco mais antigo e tradicional de Olinda (**1931** — corrigido na pesquisa do moodboard, Doc 05), Patrimônio Vivo de PE (2006). Fraque, cartola, chave da cidade. O fraque real é **verde e branco** (cores do bloco) — decisão de design pendente de validação na conversa com os guardiões (ver kit em `producao/parcerias/`).
+- **Origem real do nome (achado da Pesquisa 02, verificado):** o bloco batizou o boneco em homenagem a um **detetive de seriado do antigo Cinema do Carmo, que saía de dentro de um relógio para capturar criminosos**. Isso é canônico: o Homem da Meia-Noite *nasceu de dentro de um relógio* — amarra a origem do Guardião Supremo diretamente ao **Relógio das Ladeiras** (MacGuffin da T1, seção 7). Convém usar como mitologia de origem no episódio 5.
 
 ### Mulher do Dia — *Guardiã das histórias do presente*
 
@@ -161,6 +162,13 @@ Os bonecos gigantes não são protagonistas. São mentores — como mestres Jedi
 - **Dona Ciranda** — senhora gigante feita de estrelas e rendas; une pessoas que brigaram.
 - **Mestre Mamulengo** — boneco de madeira encantado; conta histórias que literalmente ganham vida.
 - **Banco de personagens futuros** (a desenvolver com pesquisa local): figuras inspiradas em mestres reais (Casa da Rabeca, bonequeiros), Zé Marinheiro (pescador que conhece os segredos da baía), personagens do maracatu (Cavaleiro do Congo), papangus.
+
+### Banco de mentores adicionais (achados das Pesquisas 02 e 03 — candidatos verificados)
+
+- **O Ancião do Sertão (inspirado no Zé Pereira, 1919)** — o primeiro boneco gigante do Brasil, vindo de Belém de São Francisco; na ficção, o mentor-fundador de quem todos os gigantes de Olinda "descendem". Par: **a Primeira Avó** (Vitalina). Episódio-peregrinação às origens do Encanto.
+- **O Guardião da Alvorada (inspirado no Cariri Olindense, 1921)** — um velho de longa barba que abre o carnaval às 4h da manhã, montado num burro, com a **Chave da Cidade**. Contraparte diurna perfeita do Homem da Meia-Noite (que abre as noites): mentor dos episódios "de manhã".
+- **O Herdeiro Esquecido (o "Filho do Homem da Meia-Noite")** — boneco histórico real, de Julião das Máscaras, que quase ninguém lembra. Personificação literal da luta contra o Esquecimento dentro da própria família dos guardiões. Gancho de arco.
+- **A Oficina dos Juliões / o Dador de Rostos (inspirado em Julião das Máscaras e Sílvio Botelho)** — linhagem real de bonequeiros (Roque Fogueteiro → Sílvio → herdeiros; dinastia Vilela) que sustenta o "Mestre Luiz" e a Oficina dos Bonequeiros (seção 7). Inclui a máscara-guardiã **La Ursa**.
 
 -----
 
@@ -205,6 +213,12 @@ Os bonecos gigantes não são protagonistas. São mentores — como mestres Jedi
 |**Mercado dos Sonhos** (original)                                  |Onde vivem os personagens-espírito do frevo, maracatu, caboclinho, ciranda, coco e mamulengo                                                 |
 
 **Banco de locações para episódios futuros** (do levantamento de pesquisa): túneis lendários entre Sé/Carmo/São Francisco, Largo do Amparo (antigo terreiro), Casa da Rabeca e a “Rabeca Encantada”, Escadaria do Bom Jesus, Cemitério de Santo Amaro, becos/ateliês/ruínas (patrimônio escondido).
+
+**Âncoras reais verificadas (Pesquisa 03) que reforçam locais já canônicos:**
+
+- **Alto da Sé:** existe um **Observatório Astronômico real (1890)**, ligado ao **Cometa Olinda** (avistado em 1860). Proposta de canonização: o "observatório invisível" é o irmão encantado do real, e *o Cometa Olinda — "a estrela com o nome da cidade" — vira MacGuffin pronto* do episódio 2 ("se o cometa é esquecido, o que acontece com Olinda?").
+- **Mercado dos Sonhos** ganha âncora física no **Mercado Eufrásio Barbosa (Varadouro)**, hoje Centro de Cultura Popular real — onde o carnaval concentra coco, afoxé e maracatu.
+- **Os túneis** têm lastro histórico documentado (buscas oficiais em 1939 e 1957; boca de túnel achada na restauração do Rosário em 1996), mas a historiografia os trata como galerias de drenagem — *tratar sempre como lenda na série, nunca como fato*. Conectam-se às **bicas centenárias** (água que "nasce sob o altar"), candidatas a fonte literal de Encanto.
 
 -----
 
@@ -284,12 +298,14 @@ Antes de aprovar qualquer personagem, episódio ou elemento de lore, responder:
 
 ## 11. LACUNAS DE PESQUISA (backlog antes de fechar o lore definitivo)
 
-1. **Mitologia oral de Olinda** — assombrações, causos, lendas urbanas (combustível para dezenas de episódios)
-1. **Universo completo dos bonecos gigantes** — catalogar origem, personalidade pública, simbolismos de TODOS, não só os famosos
-1. **Blocos infantis** — personagens, mascotes, símbolos, tradições
-1. **Patrimônio escondido** — becos, ateliês, casarões, ruínas, mirantes
-1. **Mestres da cultura popular** — artesãos, bonequeiros, músicos, mamulengueiros (podem inspirar personagens)
-1. **Símbolos emocionais da infância olindense** — do que as crianças de Olinda brincam? Que histórias os avós contam? *(Aqui mora a autenticidade — e é exatamente o que a conversa com Luiz Adolfo e Thales destrava.)*
+> **Status jun/2026:** as Lacunas 1–5 foram cobertas pela equipe de pesquisa (relatórios em `docs/pesquisa/` — ver índice). Permanecem como "documento vivo" para verificação de campo dos itens marcados ⚠️. A Lacuna 6 segue aberta por design — só a conversa com os guardiões a destrava.
+
+1. ✅ **Mitologia oral de Olinda** — `docs/pesquisa/01-mitologia-oral.md`. Top 5: túneis secretos, Comadre Fulozinha, causos do Homem da Meia-Noite, Perna Cabeluda (cômica), freira de Santa Gertrudes + índia Iangai (campo).
+1. ✅ **Universo completo dos bonecos gigantes** — `docs/pesquisa/02-catalogo-bonecos-blocos.md`. Catálogo do Zé Pereira (1919) aos bonecos-homenagem de 2026; bonequeiros (Sílvio Botelho, Julião das Máscaras).
+1. ✅ **Blocos infantis** — idem Pesquisa 02: Calunguinha na Folia, Pitombeirinha, Elefantinho, Trinquinha de Ás, Mangue Beatinho. Padrão real "bloco → bloquinho" espelha o universo.
+1. ✅ **Patrimônio escondido** — `docs/pesquisa/03-patrimonio-mestres.md` (Seção A): túneis, Largo do Amparo, Casa com Muxarabi, Eufrásio Barbosa, bicas, observatório real, Ruínas do Senado.
+1. ✅ **Mestres da cultura popular** — idem Pesquisa 03 (Seção B): Mestre Salustiano/Casa da Rabeca, Lia de Itamaracá, mamulengueiros, Maracatu Leão Coroado, Nação Xambá, Bajado, frevo.
+1. ⏳ **Símbolos emocionais da infância olindense** — do que as crianças de Olinda brincam? Que histórias os avós contam? *(Aqui mora a autenticidade — e é exatamente o que a conversa com Luiz Adolfo e Thales destrava. Roteiro pronto em `producao/parcerias/kit-conversa-thales.md`.)*
 
 -----
 
@@ -299,7 +315,8 @@ Antes de aprovar qualquer personagem, episódio ou elemento de lore, responder:
 |---|---|---|
 | 1.0 | jun/2026 | Documento fundacional |
 | 1.1 | jun/2026 | Fatos verificados na pesquisa do moodboard (Doc 05): HMN nasceu em **1931** (não 1932); fraque real verde/branco; casamento oficial HMN + Mulher do Dia em **1990**; Menino da Tarde como "filho" do casal; miniaturas dos bonecos carregadas por crianças |
+| 1.2 | jun/2026 | Integração dos 5 relatórios da equipe de pesquisa (`docs/pesquisa/`): **origem do nome HMN no detetive que saía de um relógio** (ancora o MacGuffin da T1); banco de mentores ampliado (Ancião do Sertão/Zé Pereira, Guardião da Alvorada/Cariri, Herdeiro Esquecido, Oficina dos Juliões); âncoras reais de locação (Observatório + Cometa Olinda, Mercado Eufrásio Barbosa, bicas/túneis); Lacunas 1–5 marcadas como pesquisadas |
 
 -----
 
-*Documento vivo. Versão 1.1 — junho/2026. Toda alteração de lore deve ser registrada aqui antes de entrar em produção.*
+*Documento vivo. Versão 1.2 — junho/2026. Toda alteração de lore deve ser registrada aqui antes de entrar em produção.*

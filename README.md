@@ -14,12 +14,22 @@ docs/                          ← base de conhecimento (anexar ao Project no Cl
   03-roadmap-estrategico.md        Fases, MVP, legitimação, financiamento, riscos
   04-setup-claude-higgsfield.md    Setup operacional passo a passo
   05-moodboard-referencias.md      Mapa estético (Grupos A–E) + lacunas para fotos próprias
+  pesquisa/                        Relatórios que preenchem as Lacunas da Bíblia (5 + índice)
+    01-mitologia-oral.md           Lendas e causos de Olinda → Top 5 para a T1
+    02-catalogo-bonecos-blocos.md  Bonecos gigantes, bonequeiros e blocos infantis
+    03-patrimonio-mestres.md       Patrimônio escondido + mestres a consultar
+    04-editais-financiamento.md    Janelas de financiamento (18 meses) + pré-requisitos
+    05-mercado-benchmark.md        Benchmarks BR, modelo Coco, COPPA/ECA, IA vs. AI slop
 
 producao/
   prompts/
     master-style-prompt.md         Trava 1 — DNA visual (PT + EN)
     templates.md                   Templates de keyframe, animação e cenário
     personagens/                   Prompts canônicos: Calu, Tico+Chico, Homem da Meia-Noite
+  testes-estilo/
+    protocolo-semana2.md           Protocolo de teste de estilo + travas de modelo
+  parcerias/
+    kit-conversa-thales.md         Kit da conversa de escuta com os guardiões
   episodios/
     ep00-mvp/                      MVP de 90s: roteiro + decupagem completos (12 planos)
   checklist-qc.md                  Gate de qualidade antes de publicar
@@ -32,10 +42,11 @@ assets/                        ← banco de assets versionado (Trava 4 — nunca
 
 | Etapa | Status |
 |---|---|
-| Camada 1 — Base de conhecimento | ✅ Pronta (docs 00–04) |
+| Camada 1 — Base de conhecimento | ✅ Pronta (docs 00–05 + 5 relatórios de pesquisa em `docs/pesquisa/`) |
+| Lacunas de pesquisa da Bíblia | ✅ 1–5 pesquisadas (Bíblia v1.2); ⏳ 6 (infância) depende da conversa de escuta |
 | Camada 2 — Planejamento do MVP | ✅ Roteiro + decupagem do ep00 prontos |
 | Semana 1 — Moodboard Mestre | 🔶 Referências CC coletadas (22 imagens + mapa estético no Doc 05); faltam fotos próprias 35mm |
-| Semana 2 — Testes de estilo + travas de modelo | ⬜ Doc 04, seção 3 |
+| Semana 2 — Testes de estilo + travas de modelo | 🔶 Protocolo pronto em `producao/testes-estilo/`; falta executar e travar |
 | Semana 3 — Character sheets + Soul IDs | ⬜ Prompts prontos em `producao/prompts/personagens/` |
 | Semana 4 — Produção do ep00 | ⬜ Decupagem pronta em `producao/episodios/ep00-mvp/` |
 | Conversa de escuta (Thales/Luiz Adolfo) | ⬜ Marcar — perguntas no Doc 03, seção 4 |
