@@ -38,7 +38,7 @@ assets/                        ← banco de assets versionado (Trava 4 — nunca
   personagens/  cenarios/  episodios/  audio/  moodboard/
 
 .claude/                       ← config do Claude Code + framework ECC (ver seção abaixo)
-  skills/ecc/   agents/   commands/   rules/ecc/   scripts/   hooks/
+  skills/   agents/   commands/   rules/ecc/   scripts/   hooks/
   settings.json                Hooks do ECC ativados em escopo de projeto
 ```
 
