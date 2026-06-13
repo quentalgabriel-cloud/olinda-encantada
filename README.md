@@ -36,7 +36,24 @@ producao/
 
 assets/                        ← banco de assets versionado (Trava 4 — nunca sobrescrever)
   personagens/  cenarios/  episodios/  audio/  moodboard/
+
+.claude/                       ← config do Claude Code + framework ECC (ver seção abaixo)
+  skills/ecc/   agents/   commands/   rules/ecc/   scripts/   hooks/
+  settings.json                Hooks do ECC ativados em escopo de projeto
 ```
+
+## Extensões — ECC (everything-claude-code)
+
+O framework [ECC](https://github.com/affaan-m/ECC) (MIT, de Affaan Mustafa) está instalado em escopo de projeto, em `.claude/`, para ficar disponível também nas sessões do Claude Code na web. Foram adicionados **197 skills, 64 agentes, 84 comandos e regras**, mais os **hooks** do framework.
+
+- **Skills, agentes e comandos** funcionam automaticamente — o Claude Code os descobre em `.claude/`. Use um comando ECC digitando `/<nome>`; invoque uma skill pelo nome.
+- **Hooks** estão ativados em `.claude/settings.json`, com `CLAUDE_PLUGIN_ROOT` resolvido por sessão via `${CLAUDE_PROJECT_DIR}` (necessário porque o container web é efêmero). Eles rodam código Node (apenas módulos nativos) em eventos de ferramenta.
+- **Comportamento a conhecer:** o ECC inclui um "GateGuard" que pede a apresentação de fatos antes do primeiro comando Bash/edição da sessão. Para ajustar:
+  - desligar o gate: rodar a sessão com `ECC_GATEGUARD=off`;
+  - desativar hooks específicos: `ECC_DISABLED_HOOKS="<id>,<id>"`;
+  - reduzir contexto injetado no início: `ECC_SESSION_START_CONTEXT=off`.
+- **Licença/atribuição:** `.claude/ECC-LICENSE` (MIT). Documentação do framework em `.claude/README.md`.
+- **Atualizar o ECC:** reinstalar com o instalador oficial — `node <clone-do-ECC>/scripts/install-apply.js --target claude-project --profile full` a partir da raiz do projeto.
 
 ## Estado atual (jun/2026)
 
