@@ -1,0 +1,3 @@
+# ECC: never commit installer node deps if someone runs it locally in .claude
+.claude/node_modules/
+.claude/scripts/node_modules/
