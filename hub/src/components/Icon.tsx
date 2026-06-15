@@ -8,6 +8,7 @@ import {
   Music, Mic, Palette, Film, Camera, Megaphone, Newspaper, Star, Heart,
   MapPin, Building2, Network, Workflow, Rocket, Wrench, Image, Video,
   Volume2, Quote, CalendarDays, Users2, Pencil, Check, AlertCircle,
+  Download, FileArchive, FileSpreadsheet, FileDown, Save,
   type LucideProps,
 } from "lucide-react";
 
@@ -21,6 +22,7 @@ const registry = {
   Music, Mic, Palette, Film, Camera, Megaphone, Newspaper, Star, Heart,
   MapPin, Building2, Network, Workflow, Rocket, Wrench, Image, Video,
   Volume2, Quote, CalendarDays, Users2, Pencil, Check, AlertCircle,
+  Download, FileArchive, FileSpreadsheet, FileDown, Save,
 } as const;
 
 export type IconName = keyof typeof registry;

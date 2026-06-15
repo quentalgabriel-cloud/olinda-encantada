@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { PageHeader, Card, CardHeader, CardTitle, CardBody, Badge } from "@/components/ui/primitives";
 import { Icon } from "@/components/Icon";
+import { downloadMarkdown } from "@/lib/download";
 
 type IdeaKind = "decision" | "gap" | "idea";
 
@@ -126,9 +127,31 @@ export function Ideas() {
 
   const sections: IdeaKind[] = ["decision", "gap", "idea"];
 
+  function exportMarkdown() {
+    const lines = ["# Ideias & Definições — Olinda Encantada", ""];
+    for (const kind of sections) {
+      lines.push(`## ${sectionConfig[kind].label}`);
+      for (const item of ideaItems.filter((i) => i.kind === kind)) {
+        lines.push(`- [${resolved.has(item.id) ? "x" : " "}] ${item.title}`);
+        if (item.note) lines.push(`  - ${item.note}`);
+      }
+      lines.push("");
+    }
+    downloadMarkdown("ideias-definicoes.md", lines.join("\n"));
+  }
+
   return (
     <div>
-      <PageHeader title="Ideias & Definições" blurb="Backlog de ideias, decisões pendentes e lacunas de pesquisa." />
+      <PageHeader title="Ideias & Definições" blurb="Backlog de ideias, decisões pendentes e lacunas de pesquisa.">
+        <button
+          type="button"
+          onClick={exportMarkdown}
+          title="Exportar (.md)"
+          className="inline-flex items-center gap-1.5 rounded-md border px-3 py-1.5 text-sm font-medium transition-colors hover:bg-muted"
+        >
+          <Icon name="Download" className="h-4 w-4" /> Exportar
+        </button>
+      </PageHeader>
 
       <div className="space-y-8">
         {sections.map((kind) => {

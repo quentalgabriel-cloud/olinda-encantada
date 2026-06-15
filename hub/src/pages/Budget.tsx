@@ -15,6 +15,7 @@ import {
 import { Card, CardBody, CardHeader, CardTitle, PageHeader, Stat } from "@/components/ui/primitives";
 import { Icon } from "@/components/Icon";
 import { docsByArea } from "@/lib/content";
+import { downloadText } from "@/lib/download";
 
 const COLORS = {
   primary: "#1b5e3a",
@@ -75,12 +76,34 @@ export function Budget() {
   const comparativoDoc = docs.find((d) => d.id.includes("comparativo-orcamento-proposta"));
   const consolidadoDoc = docs.find((d) => d.id.includes("orcamento-consolidado"));
 
+  function exportCsv() {
+    const rows: string[][] = [
+      ["Comparativo", "Tradicional", "Com IA"],
+      ...comparisonRows.map((r) => [r.label, r.traditional, r.ai]),
+      [],
+      ["Stack mensal de ferramentas (IA)", "R$/mês"],
+      ...toolStack.map((t) => [t.tool, String(t.monthly)]),
+      ["Subtotal", String(toolStackSubtotal)],
+    ];
+    const csv = rows.map((r) => r.map((c) => `"${(c ?? "").replace(/"/g, '""')}"`).join(",")).join("\n");
+    downloadText("orcamento-comparativo.csv", "﻿" + csv, "text/csv;charset=utf-8");
+  }
+
   return (
     <div>
       <PageHeader
         title="Orçamentos"
         blurb="Comparativo entre produção tradicional e produção com IA, e o orçamento consolidado do piloto de 90 dias."
-      />
+      >
+        <button
+          type="button"
+          onClick={exportCsv}
+          title="Baixar comparativo (.csv)"
+          className="inline-flex items-center gap-1.5 rounded-md border px-3 py-1.5 text-sm font-medium transition-colors hover:bg-muted"
+        >
+          <Icon name="FileSpreadsheet" className="h-4 w-4" /> Baixar .csv
+        </button>
+      </PageHeader>
 
       {/* Summary cards */}
       <div className="mb-6 grid grid-cols-1 gap-4 sm:grid-cols-3">

@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { PageHeader, Card, CardHeader, CardTitle, CardBody, Badge } from "@/components/ui/primitives";
 import { Icon } from "@/components/Icon";
 import { cn } from "@/lib/cn";
+import { downloadMarkdown } from "@/lib/download";
 
 type ColumnId = "todo" | "doing" | "done";
 
@@ -120,6 +121,18 @@ export function Kanban() {
     }
   }
 
+  function exportMarkdown() {
+    const lines = ["# Tarefas — Olinda Encantada", ""];
+    for (const col of COLUMNS) {
+      lines.push(`## ${col.title}`);
+      const items = tasks.filter((t) => t.column === col.id);
+      if (items.length === 0) lines.push("_(vazio)_");
+      for (const t of items) lines.push(`- [${col.id === "done" ? "x" : " "}] ${t.title}`);
+      lines.push("");
+    }
+    downloadMarkdown("tarefas-olinda.md", lines.join("\n"));
+  }
+
   return (
     <div>
       <PageHeader
@@ -142,6 +155,15 @@ export function Kanban() {
           >
             <Icon name="Plus" className="h-4 w-4" />
             <span className="hidden sm:inline">Adicionar</span>
+          </button>
+          <button
+            type="button"
+            onClick={exportMarkdown}
+            title="Exportar tarefas (.md)"
+            className="inline-flex shrink-0 items-center gap-1 rounded-lg border px-3 py-2 text-sm font-medium transition-colors hover:bg-muted"
+          >
+            <Icon name="Download" className="h-4 w-4" />
+            <span className="hidden sm:inline">Exportar</span>
           </button>
         </div>
       </PageHeader>

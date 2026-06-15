@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import type { Doc } from "@/lib/content";
+import { currentBody } from "@/lib/userContent";
+import { downloadMarkdown, fileBase } from "@/lib/download";
 import { Card, Badge } from "@/components/ui/primitives";
 import { Icon } from "@/components/Icon";
 
@@ -29,6 +31,19 @@ export function DocCard({ doc, featured }: { doc: Doc; featured?: boolean }) {
         <div className="mt-auto flex items-center gap-2 border-t px-5 py-3 text-xs text-muted-foreground">
           <Icon name="FileText" className="h-3.5 w-3.5" />
           <span className="truncate">{doc.file}</span>
+          <button
+            type="button"
+            aria-label="Baixar documento (.md)"
+            title="Baixar .md"
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              downloadMarkdown(fileBase(doc.file), currentBody(doc));
+            }}
+            className="ml-auto rounded-md p-1 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+          >
+            <Icon name="Download" className="h-4 w-4" />
+          </button>
         </div>
       </Card>
     </Link>
