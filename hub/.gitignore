@@ -1,7 +1,6 @@
 node_modules
 dist
 .vercel
-src/content/content.json
 *.tsbuildinfo
 
 vite.config.js

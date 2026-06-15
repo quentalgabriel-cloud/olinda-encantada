@@ -1,7 +1,7 @@
 // Content pipeline (Wave 0 contract): scans the repository markdown docs and
 // emits a single JSON the app renders. The .md files are the single source of
 // truth — editing a doc updates the hub. No CMS, no database.
-import { readdirSync, readFileSync, writeFileSync, mkdirSync, statSync } from "node:fs";
+import { readdirSync, readFileSync, writeFileSync, mkdirSync, statSync, existsSync } from "node:fs";
 import { join, dirname, relative, basename } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -119,6 +119,14 @@ docs.sort((a, b) => a.file.localeCompare(b.file));
 
 const byArea = {};
 for (const doc of docs) byArea[doc.area] = (byArea[doc.area] || 0) + 1;
+
+// Resilience: when the repo docs are not present (e.g. the Vercel build only
+// uploads hub/), keep the committed content.json instead of overwriting it with
+// an empty bundle. Locally, where docs/ and producao/ exist, this regenerates.
+if (docs.length === 0 && existsSync(outFile)) {
+  console.log(`[build-content] 0 docs found — keeping existing committed content.json`);
+  process.exit(0);
+}
 
 mkdirSync(dirname(outFile), { recursive: true });
 writeFileSync(
