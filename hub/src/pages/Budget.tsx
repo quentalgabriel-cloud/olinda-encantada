@@ -38,6 +38,15 @@ const pilotCashData = [
   { name: "Flávio", valor: 6000, color: COLORS.accent },
 ];
 
+// Distribuição inteligente de verba — Cenário A (piloto + lançamento, 2026).
+const fundDistribution = [
+  { name: "Produção", pct: 45, color: COLORS.primary },
+  { name: "Evento de lançamento", pct: 22, color: COLORS.accent },
+  { name: "Imprensa / PR", pct: 13, color: COLORS.secondary },
+  { name: "Tráfego pago", pct: 12, color: COLORS.destructive },
+  { name: "Reserva", pct: 8, color: COLORS.muted },
+];
+
 const toolStack = [
   { tool: "Claude", monthly: 115 },
   { tool: "Higgsfield", monthly: 280 },
@@ -75,6 +84,7 @@ export function Budget() {
   const docs = docsByArea("orcamentos");
   const comparativoDoc = docs.find((d) => d.id.includes("comparativo-orcamento-proposta"));
   const consolidadoDoc = docs.find((d) => d.id.includes("orcamento-consolidado"));
+  const estudoDoc = docs.find((d) => d.id.includes("estudo-veiculacao"));
 
   function exportCsv() {
     const rows: string[][] = [
@@ -204,6 +214,53 @@ export function Budget() {
           </CardBody>
         </Card>
       </div>
+
+      {/* Fund distribution */}
+      <Card className="mb-6">
+        <CardHeader>
+          <CardTitle>Distribuição inteligente de verba — lançamento 2026</CardTitle>
+        </CardHeader>
+        <CardBody>
+          <div className="grid gap-4 lg:grid-cols-[1.2fr_1fr]">
+            <div className="h-[280px] w-full">
+              <ResponsiveContainer width="100%" height="100%">
+                <BarChart layout="vertical" data={fundDistribution} margin={{ top: 4, right: 32, left: 8, bottom: 4 }}>
+                  <XAxis type="number" hide domain={[0, 50]} />
+                  <YAxis
+                    type="category"
+                    dataKey="name"
+                    width={140}
+                    tick={{ fill: COLORS.muted, fontSize: 12 }}
+                  />
+                  <Tooltip formatter={(v: number) => `${v}%`} />
+                  <Bar dataKey="pct" radius={[0, 6, 6, 0]} label={{ position: "right", formatter: (v: number) => `${v}%`, fill: COLORS.muted, fontSize: 12 }}>
+                    {fundDistribution.map((entry) => (
+                      <Cell key={entry.name} fill={entry.color} />
+                    ))}
+                  </Bar>
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
+            <div className="flex flex-col justify-center gap-2 text-sm text-muted-foreground">
+              <p>
+                A IA derruba o custo de <strong className="text-foreground">produção</strong> — não o de
+                chegar ao público. Por isso a produção fica em ~45% e o restante vai para o{" "}
+                <strong className="text-foreground">momento de lançamento</strong> (evento + imprensa +
+                tráfego), onde a rede de imprensa do Thales multiplica cada real.
+              </p>
+              <p className="text-xs">
+                Cenário A (clube, 2026): caixa-base ~R$ 50–65 mil. Regra: lançamento + imprensa nunca
+                abaixo de ~30% no ano de estreia.
+              </p>
+              {estudoDoc && (
+                <Link to={`/doc/${estudoDoc.id}`} className="mt-1 inline-flex items-center gap-1 text-secondary underline">
+                  <Icon name="FileText" className="h-4 w-4" /> Ver o estudo completo (veiculação, imprensa, evento, tráfego)
+                </Link>
+              )}
+            </div>
+          </div>
+        </CardBody>
+      </Card>
 
       {/* Comparison table */}
       <Card className="mb-6">
