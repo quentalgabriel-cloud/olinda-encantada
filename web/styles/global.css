@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * Design tokens — sincronizados com tailwind.config.ts e lib/colors.ts.
+ * Fonte: docs/05-moodboard-referencias.md (Grupo E).
+ */
+:root {
+  --color-tile-blue: #1a6b9f;
+  --color-colonial-yellow: #f4c430;
+  --color-carnival-red: #e63946;
+  --color-colonial-green: #2d8f3d;
+  --color-colonial-white: #f5f5f5;
+  --color-enchanted-night: #1a1a2e;
+  --color-magical-gold: #ffd700;
+
+  --space-section: clamp(4rem, 3rem + 5vw, 10rem);
+  --duration-normal: 300ms;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-enchanted-night);
+  color: var(--color-colonial-white);
+}
+
+/* Respeita usuários com preferência de movimento reduzido. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Compensa a navbar fixa ao navegar por âncoras. */
+section[id] {
+  scroll-margin-top: 5rem;
+}
