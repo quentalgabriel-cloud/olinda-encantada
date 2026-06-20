@@ -63,7 +63,14 @@ const bentoLinks: BentoLink[] = [
     icon: "Users",
     title: "Equipe",
     blurb: "Gabriel (direção e pipeline de IA), Thales/Clube e Flávio Ferrari.",
-    span: "md:col-span-2",
+    span: "md:col-span-1",
+  },
+  {
+    to: "/elenco",
+    icon: "Mic",
+    title: "Elenco & Vozes",
+    blurb: "Vozes de celebridades e criadores locais nordestinos para dar vida aos personagens.",
+    span: "md:col-span-1",
   },
 ];
 
@@ -108,7 +115,7 @@ export function Dashboard() {
       <Card className="mb-6">
         <CardBody className="grid grid-cols-2 gap-6 p-6 sm:grid-cols-3 lg:grid-cols-5">
           <Stat label="Documentos" value={content.total} hint="na base de produção" />
-          <Stat label="Áreas" value="12" hint="frentes de trabalho" />
+          <Stat label="Áreas" value="13" hint="frentes de trabalho" />
           <Stat label="Orçamento piloto" value="R$ 18–24 mil" hint="estimativa com IA" />
           <Stat label="Prazo" value="90 dias" hint="≈ 3 meses" />
           <Stat label="Ferramentas IA" value="R$ 1.000" hint="por mês" />

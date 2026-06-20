@@ -28,6 +28,7 @@ export const AREAS: Area[] = [
   { id: "tarefas", label: "Tarefas", short: "Tarefas", icon: "KanbanSquare", view: "kanban", blurb: "Quadro de tarefas por etapa: a fazer, fazendo, feito." },
   { id: "orcamentos", label: "Orçamentos", short: "Orçamento", icon: "Wallet", view: "budget", blurb: "Custos de ferramentas, equipe e comparativo tradicional × IA." },
   { id: "equipe", label: "Equipe & Pessoas", short: "Equipe", icon: "Users", view: "team", blurb: "Quem é quem, papéis e a estrutura de sociedade." },
+  { id: "elenco", label: "Elenco & Vozes", short: "Elenco", icon: "Mic", view: "docs", blurb: "Estratégia de vozes: celebridades e criadores locais nordestinos." },
   { id: "stack", label: "Stack & Ferramentas", short: "Stack", icon: "Cpu", view: "docs", blurb: "Pipeline de IA, MCPs, prompts e testes de estilo." },
   { id: "editais", label: "Captação & Editais", short: "Editais", icon: "Landmark", view: "docs", blurb: "Janelas de financiamento, prazos e benchmark de mercado." },
   { id: "ideias", label: "Ideias & Definições", short: "Ideias", icon: "Lightbulb", view: "ideas", blurb: "Backlog de ideias, decisões pendentes e lacunas de pesquisa." },

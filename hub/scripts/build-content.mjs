@@ -19,6 +19,7 @@ function areaFor(p) {
   if (f.startsWith("producao/financiamento/")) return "orcamentos";
   if (f.startsWith("producao/parcerias/") || f.startsWith("producao/pesquisa-campo/")) return "parcerias";
   if (f.startsWith("producao/prompts/") || f.startsWith("producao/testes-estilo/")) return "stack";
+  if (f.startsWith("producao/elenco/")) return "elenco";
   if (f === "producao/checklist-qc.md") return "ideias";
   if (f === "docs/01-biblia-universo.md" || f === "docs/05-moodboard-referencias.md") return "biblia";
   if (f === "docs/pesquisa/01-mitologia-oral.md" || f === "docs/pesquisa/02-catalogo-bonecos-blocos.md" || f === "docs/pesquisa/03-patrimonio-mestres.md") return "biblia";
@@ -37,6 +38,7 @@ function categoryFor(p) {
   if (f.startsWith("producao/financiamento/")) return "Financiamento";
   if (f.startsWith("producao/episodios/")) return "Episódios";
   if (f.startsWith("producao/parcerias/")) return "Parcerias";
+  if (f.startsWith("producao/elenco/")) return "Elenco";
   if (f.startsWith("producao/prompts/")) return "Prompts";
   if (f.startsWith("producao/pesquisa-campo/")) return "Pesquisa de campo";
   if (f.startsWith("producao/testes-estilo/")) return "Testes de estilo";
