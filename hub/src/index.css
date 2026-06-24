@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400&family=Inter:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   Design tokens — paleta autoral do universo Olinda Encantada
+   (verde do Homem da Meia-Noite, amarelo-casario, azul-azulejo,
+   off-white de casario). Fonte: Master Style Prompt do projeto.
+   ============================================================ */
+:root {
+  --background: #fbf7ef;
+  --foreground: #1f2421;
+  --card: #ffffff;
+  --card-foreground: #1f2421;
+  --muted: #f1ead9;
+  --muted-foreground: #6b6256;
+  --primary: #1b5e3a;        /* fraque verde do Homem da Meia-Noite */
+  --primary-foreground: #ffffff;
+  --secondary: #2e6e8e;      /* azul-azulejo */
+  --secondary-foreground: #ffffff;
+  --accent: #e8a33d;         /* amarelo-casario / ouro de frevo */
+  --accent-foreground: #2a1c06;
+  --destructive: #c0492b;    /* vermelho-bloco / terracota */
+  --destructive-foreground: #ffffff;
+  --border: #e7decb;
+  --input: #e7decb;
+  --ring: #1b5e3a;
+  --sidebar: #14342a;        /* verde noturno profundo */
+  --sidebar-foreground: #e9e2d0;
+  --sidebar-muted: #9fb3a4;
+  --sidebar-accent: #e8a33d;
+  --radius: 1rem;
+}
+
+.dark {
+  --background: #14181a;
+  --foreground: #ece6d8;
+  --card: #1d2326;
+  --card-foreground: #ece6d8;
+  --muted: #262d2c;
+  --muted-foreground: #9aa39c;
+  --primary: #3da06a;
+  --primary-foreground: #07130c;
+  --secondary: #57a0bf;
+  --secondary-foreground: #051016;
+  --accent: #e8a33d;
+  --accent-foreground: #2a1c06;
+  --destructive: #d9694a;
+  --destructive-foreground: #1a0a05;
+  --border: #2f3836;
+  --input: #2f3836;
+  --ring: #3da06a;
+  --sidebar: #0f201a;
+  --sidebar-foreground: #d9d2c0;
+  --sidebar-muted: #7e8f84;
+  --sidebar-accent: #e8a33d;
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: "Inter", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4, .font-display {
+    font-family: "Newsreader", Georgia, serif;
+  }
+}
+
+/* Frevo accent strip — used on the top bar and active markers */
+.frevo-strip {
+  background: linear-gradient(90deg, #1b5e3a, #2e6e8e, #e8a33d, #c0492b, #e8a33d, #2e6e8e, #1b5e3a);
+}
+
+/* Markdown reading surface */
+.prose-olinda :where(h1, h2, h3) { font-family: "Newsreader", serif; color: var(--foreground); }
+.prose-olinda :where(a) { color: var(--secondary); text-decoration: underline; }
+.prose-olinda :where(table) { width: 100%; border-collapse: collapse; }
+.prose-olinda :where(th, td) { border: 1px solid var(--border); padding: 0.5rem 0.75rem; text-align: left; }
+.prose-olinda :where(blockquote) { border-left: 3px solid var(--accent); padding-left: 1rem; color: var(--muted-foreground); font-style: italic; }
